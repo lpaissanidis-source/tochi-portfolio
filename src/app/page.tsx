@@ -79,7 +79,7 @@ export default async function HomePage({
               </div>
               <div className="p-4">
                 <p className="font-sans text-xs tracking-widest uppercase mb-1" style={{ color: 'var(--muted)' }}>
-                  {LABEL[p.categoria] ?? p.categoria}{p.año ? ` · ${p.año}` : ''}
+                  {LABEL[p.categoria] ?? p.categoria}{p.anio ? ` · ${p.anio}` : ''}
                 </p>
                 <h2 className="text-lg leading-snug">{p.titulo}</h2>
                 {p.cliente && (

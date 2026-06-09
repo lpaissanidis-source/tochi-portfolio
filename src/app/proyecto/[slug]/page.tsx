@@ -41,7 +41,7 @@ export default async function ProyectoPage({ params }: { params: Promise<{ slug:
         <div className="mb-8">
           <p className="font-sans text-xs tracking-widest uppercase mb-2" style={{ color: 'var(--muted)' }}>
             {LABEL[proyecto.categoria] ?? proyecto.categoria}
-            {proyecto.año ? ` · ${proyecto.año}` : ''}
+            {proyecto.anio ? ` · ${proyecto.anio}` : ''}
             {proyecto.cliente ? ` · ${proyecto.cliente}` : ''}
           </p>
           <h2 className="text-3xl md:text-4xl leading-tight mb-4">{proyecto.titulo}</h2>

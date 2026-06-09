@@ -33,7 +33,7 @@ export const proyectoSchema = defineType({
       },
     }),
     defineField({
-      name: 'año',
+      name: 'anio',
       title: 'Año',
       type: 'number',
     }),
