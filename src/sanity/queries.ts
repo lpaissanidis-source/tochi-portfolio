@@ -17,7 +17,7 @@ export interface Proyecto {
 
 export async function getProyectos(): Promise<Proyecto[]> {
   return client.fetch(
-    `*[_type == "proyecto"] | order(orden asc, _createdAt desc) {
+    `*[_type == "proyecto" && !(_id in path("drafts.**"))] | order(orden asc, _createdAt desc) {
       _id, titulo, slug, categoria, anio, descripcion,
       imagenPortada, cliente, destacado, orden
     }`
@@ -26,7 +26,7 @@ export async function getProyectos(): Promise<Proyecto[]> {
 
 export async function getProyecto(slug: string): Promise<Proyecto | null> {
   return client.fetch(
-    `*[_type == "proyecto" && slug.current == $slug][0] {
+    `*[_type == "proyecto" && !(_id in path("drafts.**")) && slug.current == $slug][0] {
       _id, titulo, slug, categoria, anio, descripcion,
       imagenPortada, galeria, "archivoPdf": archivoPdf.asset->url,
       cliente, destacado, orden
