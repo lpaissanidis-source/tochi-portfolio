@@ -59,7 +59,7 @@ export default async function HomePage({
           No hay proyectos todavía.
         </p>
       ) : (
-        <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-stone-200 mx-6 mb-12">
+        <main className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mx-6 mb-12">
           {filtrados.map((p) => (
             <Link key={p._id} href={`/proyecto/${p.slug.current}`} className="group block bg-[#f8f7f4] overflow-hidden">
               <div className="relative aspect-[4/5] overflow-hidden">
