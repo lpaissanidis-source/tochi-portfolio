@@ -1,0 +1,143 @@
+[
+  {
+    "fields": [
+      {
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "titulo",
+        "type": "string",
+        "title": "Título"
+      },
+      {
+        "options": {
+          "source": "titulo"
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "custom"
+              },
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "slug",
+        "type": "slug",
+        "title": "URL"
+      },
+      {
+        "options": {
+          "list": [
+            {
+              "title": "Estilismo",
+              "value": "estilismo"
+            },
+            {
+              "title": "Producción de moda",
+              "value": "produccion"
+            },
+            {
+              "title": "Editorial",
+              "value": "editorial"
+            },
+            {
+              "title": "Campaña",
+              "value": "campana"
+            },
+            {
+              "title": "Otro",
+              "value": "otro"
+            }
+          ]
+        },
+        "name": "categoria",
+        "type": "string",
+        "title": "Categoría"
+      },
+      {
+        "name": "anio",
+        "type": "number",
+        "title": "Año"
+      },
+      {
+        "rows": 4,
+        "name": "descripcion",
+        "type": "text",
+        "title": "Descripción"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "validation": [
+          {
+            "level": "error",
+            "rules": [
+              {
+                "flag": "presence",
+                "constraint": "required"
+              }
+            ]
+          }
+        ],
+        "name": "imagenPortada",
+        "type": "image",
+        "title": "Imagen de portada"
+      },
+      {
+        "of": [
+          {
+            "options": {
+              "hotspot": true
+            },
+            "type": "image"
+          }
+        ],
+        "name": "galeria",
+        "type": "array",
+        "title": "Galería de imágenes"
+      },
+      {
+        "options": {
+          "accept": ".pdf"
+        },
+        "name": "archivoPdf",
+        "type": "file",
+        "title": "Archivo PDF (opcional)"
+      },
+      {
+        "name": "cliente",
+        "type": "string",
+        "title": "Cliente / Marca"
+      },
+      {
+        "initialValue": false,
+        "name": "destacado",
+        "type": "boolean",
+        "title": "¿Destacar en portada?"
+      },
+      {
+        "initialValue": 0,
+        "name": "orden",
+        "type": "number",
+        "title": "Orden de aparición"
+      }
+    ],
+    "name": "proyecto",
+    "type": "document"
+  }
+]

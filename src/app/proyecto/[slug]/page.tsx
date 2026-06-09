@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import { getProyecto, getProyectos } from '@/sanity/queries'
 import { urlFor } from '@/sanity/client'
 
-export const revalidate = 60
+export const revalidate = 10
 
 export async function generateStaticParams() {
   if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID) return []
